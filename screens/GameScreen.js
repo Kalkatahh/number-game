@@ -28,7 +28,7 @@ const GameScreen = (props) => {
 
   useEffect(() => {
     if (currentGuess === userChoice) {
-      onGameOver;
+      onGameOver(rounds);
     }
   }, [currentGuess, userChoice, onGameOver]);
 
@@ -55,7 +55,7 @@ const GameScreen = (props) => {
       currentGuess
     );
 
-    setRounds((rounds) => rounds + 1);
+    setRounds((curRounds) => curRounds + 1);
 
     setCurrentGuess(nextNumber);
   };
