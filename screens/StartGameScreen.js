@@ -52,7 +52,10 @@ const StartGameScreen = (props) => {
       <Card style={styles.summaryContainer}>
         <Text> You selected</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title="Start Game" />
+        <Button
+          title="Start Game"
+          onPress={() => props.onStartGame(selectedNumber)}
+        />
       </Card>
     );
   }
